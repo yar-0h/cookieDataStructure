@@ -1,0 +1,15 @@
+services:
+  directus:
+    image: directus/directus:10.10.7
+    ports:
+      - 8055:8055
+    volumes:
+      - ./database:/directus/database
+      - ./uploads:/directus/uploads
+      - ./extensions:/directus/extensions
+    environment:
+      KEY: "2gtk3oa05mjf"
+      SECRET: "r5sdqu41mdrx"
+      ADMIN_EMAIL: ""
+      ADMIN_PASSWORD: ""
+      WEBSOCKETS_ENABLED: "true"
